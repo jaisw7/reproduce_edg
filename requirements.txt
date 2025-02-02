@@ -1,0 +1,6 @@
+
+# PyPI packages
+matplotlib >= 3.8.2
+
+# Git repose
+git+https://github.com/jaisw7/edg.git@main

@@ -21,8 +21,8 @@ Physical Curve("periodic-ydir-l", 7) = {l3};
 Physical Curve("periodic-ydir-r", 8) = {l1};
 
 // periodic mesh
-Periodic Line {l4} = {l2} Translate {1, 0, 0};
-Periodic Line {l3} = {l1} Translate {1, 0, 0};
+Periodic Line {l4} = {l2} Translate {-2, 0, 0};
+Periodic Line {l3} = {l1} Translate {0, 2, 0};
 
 Curve Loop(1) = {l1, l2, l3, l4};
 Plane Surface(1) = {1};

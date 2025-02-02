@@ -30,4 +30,14 @@ Physical Surface("fluid") = {1};
 Transfinite Surface{1} = {l1, l2, l3, l4};
 
 Mesh 2;
-Save "mixing_regime.msh";
+Save "mixing_regime_8.msh";
+Save "mixing_regime_8.vtk";
+RefineMesh;
+Save "mixing_regime_32.msh";
+Save "mixing_regime_32.vtk";
+RefineMesh;
+Save "mixing_regime_128.msh";
+Save "mixing_regime_128.vtk";
+RefineMesh;
+Save "mixing_regime_512.msh";
+Save "mixing_regime_512.vtk";

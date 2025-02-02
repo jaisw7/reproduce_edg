@@ -1,2 +1,5 @@
 fast_spectral/cavity_conduction/thermal/**
 *.pdf
+*.vtk
+*.vtu
+*.msh

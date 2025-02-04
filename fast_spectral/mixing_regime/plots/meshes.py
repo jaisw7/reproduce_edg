@@ -1,4 +1,5 @@
 import glob
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -22,8 +23,9 @@ for filename in sorted(glob.glob("../*.vtk"), key=natsort):
     fig, ax = cp.subplots()
     plt.triplot(x, y, triangles, color="black", linewidth=0.5)  # Overlay edges
     ax.set(xlim=(0, 2), ylim=(0, 2))
+    plt.axis("off")
     cp.savepdf(outfile)
-    subprocess.call(["pdfcrop", outfile, outfile])
+    subprocess.call(["pdfcrop", "--margins", "5", outfile, outfile])
     files.append(outfile)
 
 outfile = "mixing_regime_meshes.pdf"

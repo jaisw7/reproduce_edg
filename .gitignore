@@ -3,3 +3,4 @@ fast_spectral/cavity_conduction/thermal/**
 *.vtk
 *.vtu
 *.msh
+*.sh

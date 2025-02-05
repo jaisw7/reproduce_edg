@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+for p in {1,2}; do
+    edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_8.msh distribution_mixing_regime_8_p${p}-0.1.h5 -s 2 -v basis-tri::degree $p
+    edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_32.msh distribution_mixing_regime_32_p${p}-0.1.h5 -s 1 -v basis-tri::degree $p
+    edgfsPost2D compute_error -- distribution_mixing_regime_8_p${p}-0.1.vtu distribution_mixing_regime_32_p${p}-0.1.vtu
+
+    edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_32.msh distribution_mixing_regime_32_p${p}-0.1.h5 -s 2 -v basis-tri::degree $p
+    edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_128.msh distribution_mixing_regime_128_p${p}-0.1.h5 -s 1 -v basis-tri::degree $p
+    edgfsPost2D compute_error -- distribution_mixing_regime_32_p${p}-0.1.vtu distribution_mixing_regime_128_p${p}-0.1.vtu
+
+    edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_128.msh distribution_mixing_regime_128_p${p}-0.1.h5 -s 2 -v basis-tri::degree $p
+    edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_512.msh distribution_mixing_regime_512_p${p}-0.1.h5 -s 1 -v basis-tri::degree $p
+    edgfsPost2D compute_error -- distribution_mixing_regime_128_p${p}-0.1.vtu distribution_mixing_regime_512_p${p}-0.1.vtu
+done
+
+p=3
+edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_8.msh distribution_mixing_regime_8_p${p}-0.1.h5 -s 2 -v basis-tri::degree $p
+edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_32.msh distribution_mixing_regime_32_p${p}-0.1.h5 -s 1 -v basis-tri::degree $p
+edgfsPost2D compute_error -- distribution_mixing_regime_8_p${p}-0.1.vtu distribution_mixing_regime_32_p${p}-0.1.vtu
+
+edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_32.msh distribution_mixing_regime_32_p${p}-0.1.h5 -s 2 -v basis-tri::degree $p
+edgfsPost2D vtu -- mixing_regime_imex-edg.ini mixing_regime_128.msh distribution_mixing_regime_128_p${p}-0.1.h5 -s 1 -v basis-tri::degree $p
+edgfsPost2D compute_error -- distribution_mixing_regime_32_p${p}-0.1.vtu distribution_mixing_regime_128_p${p}-0.1.vtu

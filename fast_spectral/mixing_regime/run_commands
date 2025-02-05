@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_8.msh -v time::dt 0.002 -v plugin-solutionwriter::basename distribution_mixing_regime_8_p1-{t:.6g} -v config::device cuda -v basis-tri::degree 1
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_32.msh -v time::dt 0.001 -v plugin-solutionwriter::basename distribution_mixing_regime_32_p1-{t:.6g} -v config::device cuda -v basis-tri::degree 1
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_128.msh -v time::dt 0.001 -v plugin-solutionwriter::basename distribution_mixing_regime_128_p1-{t:.6g} -v config::device cuda -v basis-tri::degree 1
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_512.msh -v time::dt 0.0005 -v plugin-solutionwriter::basename distribution_mixing_regime_512_p1-{t:.6g} -v config::device cuda -v basis-tri::degree 1
+
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_8.msh -v time::dt 0.001 -v plugin-solutionwriter::basename distribution_mixing_regime_8_p2-{t:.6g} -v config::device cuda -v basis-tri::degree 2
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_32.msh -v time::dt 0.001 -v plugin-solutionwriter::basename distribution_mixing_regime_32_p2-{t:.6g} -v config::device cuda -v basis-tri::degree 2
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_128.msh -v time::dt 0.0005 -v plugin-solutionwriter::basename distribution_mixing_regime_128_p2-{t:.6g} -v config::device cuda -v basis-tri::degree 2
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_512.msh -v time::dt 0.00025 -v plugin-solutionwriter::basename distribution_mixing_regime_512_p2-{t:.6g} -v config::device cuda -v basis-tri::degree 2
+
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_8.msh -v time::dt 0.0005 -v plugin-solutionwriter::basename distribution_mixing_regime_8_p3-{t:.6g} -v config::device cuda -v basis-tri::degree 3
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_32.msh -v time::dt 0.0005 -v plugin-solutionwriter::basename distribution_mixing_regime_32_p3-{t:.6g} -v config::device cuda -v basis-tri::degree 3
+edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_128.msh -v time::dt 0.00025 -v plugin-solutionwriter::basename distribution_mixing_regime_128_p3-{t:.6g} -v config::device cuda -v basis-tri::degree 3
+#edgfsFs2D run mixing_regime_imex-edg.ini mixing_regime_512.msh -v time::dt 0.00025 -v plugin-solutionwriter::basename distribution_mixing_regime_512_p3-{t:.6g} -v config::device cuda -v basis-tri::degree 3 -v plugin-solutionwriter::time 0.01

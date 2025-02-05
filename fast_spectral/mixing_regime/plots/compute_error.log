@@ -1,0 +1,8 @@
+2025-02-05 04:12:50.550 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 1.9882467674609564e-06
+2025-02-05 04:12:57.688 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 5.350876189264995e-07
+2025-02-05 04:13:11.296 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 6.378121346388901e-08
+2025-02-05 04:13:17.032 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 5.694296157831907e-07
+2025-02-05 04:13:24.163 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 1.605914127946402e-08
+2025-02-05 04:13:37.885 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 3.2612000239658497e-10
+2025-02-05 04:13:43.489 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 1.5847898381273416e-07
+2025-02-05 04:13:50.742 | INFO     | edgfs2D.post_process.compute_error:execute:62 - Field: u, Mean Squared Error: 4.943404494995454e-10

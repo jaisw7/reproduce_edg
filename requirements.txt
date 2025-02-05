@@ -1,6 +1,7 @@
 
 # PyPI packages
 matplotlib >= 3.8.2
+mpltools >= 0.2.0
 
 # Git repose
 git+https://github.com/jaisw7/edg.git@main

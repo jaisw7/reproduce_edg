@@ -1,4 +1,5 @@
 fast_spectral/cavity_conduction/thermal/**
+fast_spectral/cavity_conduction/classic-dg/**
 *.pdf
 *.vtk
 *.vtu

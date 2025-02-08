@@ -1,6 +1,7 @@
 fast_spectral/cavity_conduction/thermal/**
 fast_spectral/cavity_conduction/classic-dg/**
 fast_spectral/cavity_conduction/classic-edg/**
+fast_spectral/contriction/classic-edg/**
 *.pdf
 *.vtk
 *.vtu

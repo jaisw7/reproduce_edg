@@ -1,3 +1,4 @@
+fast_spectral/mixing_regime/imex-edg/**
 fast_spectral/cavity_conduction/thermal/**
 fast_spectral/cavity_conduction/classic-dg/**
 fast_spectral/cavity_conduction/classic-edg/**

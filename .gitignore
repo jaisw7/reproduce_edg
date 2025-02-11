@@ -9,3 +9,4 @@ fast_spectral/couette/classic-edg/**
 *.vtu
 *.msh
 *.sh
+*.h5

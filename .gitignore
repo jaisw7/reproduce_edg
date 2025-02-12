@@ -4,6 +4,7 @@ fast_spectral/cavity_conduction/classic-dg/**
 fast_spectral/cavity_conduction/classic-edg/**
 fast_spectral/contriction/classic-edg/**
 fast_spectral/couette/classic-edg/**
+**/postProcess/**
 *.pdf
 *.vtk
 *.vtu

@@ -29,6 +29,7 @@ Macro GenerateMesh
 
     // Assign a mesh size to all the points of all the volumes:
     MeshSize{ PointsOf{ Surface{:}; } } = mesh_size;
+    MeshSize { 3 } = mesh_size * 0.5;
     // MeshSize{ PointsOf{ Curve{1}; } } = lc;
     // MeshSize{ PointsOf{ Curve{2}; } } = lc;
 

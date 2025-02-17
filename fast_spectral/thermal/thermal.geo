@@ -76,22 +76,30 @@ f0 = 0;
 Call GenerateMesh;
 Mesh 2;
 Save "thermal_f00/thermal_f00.msh";
+RefineMesh;
+Save "thermal_f00_refine2x/thermal_f00.msh";
 Delete Model;
 
 f0 = 0.2;
 Call GenerateMesh;
 Mesh 2;
 Save "thermal_f20/thermal_f20.msh";
+RefineMesh;
+Save "thermal_f20_refine2x/thermal_f20.msh";
 Delete Model;
 
 f0 = 0.4;
 Call GenerateMesh;
 Mesh 2;
 Save "thermal_f40/thermal_f40.msh";
+RefineMesh;
+Save "thermal_f40_refine2x/thermal_f40.msh";
 Delete Model;
 
 f0 = 0.6;
 Call GenerateMesh;
 Mesh 2;
 Save "thermal_f60/thermal_f60.msh";
+RefineMesh;
+Save "thermal_f60_refine2x/thermal_f60.msh";
 Delete Model;

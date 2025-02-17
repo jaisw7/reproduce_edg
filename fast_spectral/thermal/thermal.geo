@@ -103,3 +103,11 @@ Save "thermal_f60/thermal_f60.msh";
 RefineMesh;
 Save "thermal_f60_refine2x/thermal_f60.msh";
 Delete Model;
+
+f0 = 0.8;
+Call GenerateMesh;
+Mesh 2;
+Save "thermal_f80/thermal_f80.msh";
+RefineMesh;
+Save "thermal_f80_refine2x/thermal_f80.msh";
+Delete Model;

@@ -25,6 +25,7 @@ H = H0;     // Height of the inlet and outlet
 
 R = 0.5*H0;  // radius of bump
 x0 = Xi + L/2.0; // center of bump
+refine_symmetry_line = 0;
 
 Macro GenerateMesh
     Point(1) = {0, 0, 0, ls};
@@ -59,6 +60,9 @@ Macro GenerateMesh
     Line(8) = {8, 1};
 
     MeshSize{ PointsOf{ Curve{4,5,6}; } } = f;
+    If (refine_symmetry_line == 1)
+        MeshSize{ PointsOf{ Curve{1}; } } = f;
+    EndIf
 
     Curve Loop(1) = {1, 2, 3, 4, -5, 6, 7, 8};
     Plane Surface(1) = {1};
@@ -72,10 +76,47 @@ Macro GenerateMesh
     Physical Surface("fluid") = {1};
 Return
 
+// non-refined cases
+refine_symmetry_line = 0;
+f = ls * 0.4;
+
 f0 = 0;
 Call GenerateMesh;
 Mesh 2;
 Save "thermal_f00/thermal_f00.msh";
+Delete Model;
+
+f0 = 0.2;
+Call GenerateMesh;
+Mesh 2;
+Save "thermal_f20/thermal_f20.msh";
+Delete Model;
+
+f0 = 0.4;
+Call GenerateMesh;
+Mesh 2;
+Save "thermal_f40/thermal_f40.msh";
+Delete Model;
+
+f0 = 0.6;
+Call GenerateMesh;
+Mesh 2;
+Save "thermal_f60/thermal_f60.msh";
+Delete Model;
+
+f0 = 0.8;
+Call GenerateMesh;
+Mesh 2;
+Save "thermal_f80/thermal_f80.msh";
+Delete Model;
+
+// refined cases
+refine_symmetry_line = 1;
+f = ls * 0.6;
+
+f0 = 0;
+Call GenerateMesh;
+Mesh 2;
 RefineMesh;
 Save "thermal_f00_refine2x/thermal_f00.msh";
 Delete Model;
@@ -83,7 +124,6 @@ Delete Model;
 f0 = 0.2;
 Call GenerateMesh;
 Mesh 2;
-Save "thermal_f20/thermal_f20.msh";
 RefineMesh;
 Save "thermal_f20_refine2x/thermal_f20.msh";
 Delete Model;
@@ -91,7 +131,6 @@ Delete Model;
 f0 = 0.4;
 Call GenerateMesh;
 Mesh 2;
-Save "thermal_f40/thermal_f40.msh";
 RefineMesh;
 Save "thermal_f40_refine2x/thermal_f40.msh";
 Delete Model;
@@ -99,7 +138,6 @@ Delete Model;
 f0 = 0.6;
 Call GenerateMesh;
 Mesh 2;
-Save "thermal_f60/thermal_f60.msh";
 RefineMesh;
 Save "thermal_f60_refine2x/thermal_f60.msh";
 Delete Model;
@@ -107,7 +145,6 @@ Delete Model;
 f0 = 0.8;
 Call GenerateMesh;
 Mesh 2;
-Save "thermal_f80/thermal_f80.msh";
 RefineMesh;
 Save "thermal_f80_refine2x/thermal_f80.msh";
 Delete Model;
